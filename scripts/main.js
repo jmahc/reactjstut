@@ -13,6 +13,8 @@ var base           = Rebase.createClass('https://catch-of-the-day-9b18e.firebase
 /*
     App
 */
+
+
 var App = React.createClass({
     getInitialState : function() {
         return {
