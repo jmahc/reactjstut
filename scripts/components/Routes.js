@@ -4,7 +4,7 @@ import App from './App';
 import StorePicker from './StorePicker';
 import NotFound from './NotFound';
 
-var Routes = (
+let Routes = (
     <Router history= {browserHistory}>
         <Route path="/" component={StorePicker} />
         <Route path="/store/:storeId" component={App} />

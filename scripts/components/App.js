@@ -8,7 +8,8 @@ import Inventory from './Inventory';
 import Fish from './Fish';
 import reactMixin from 'react-mixin';
 import autobind from 'autobind-decorator';
-var base = Rebase.createClass('https://catch-of-the-day-9b18e.firebaseio.com/');
+import config from '../config'
+var base = Rebase.createClass(config.databaseURL);
 
 @autobind
 class App extends React.Component {
@@ -102,7 +103,8 @@ class App extends React.Component {
                     loadSamples={this.loadSamples}
                     fishes={this.state.fishes}
                     linkState={this.linkState.bind(this)}
-                    removeFish={this.removeFish} />
+                    removeFish={this.removeFish}
+                    {...this.props} />
             </div>
         )
     }
